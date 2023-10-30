@@ -1,5 +1,5 @@
-with f_order_fulfillment as (
-    select * from {{ ref('fact_order_fulfillment') }}
+with f_sales as (
+    select * from {{ ref('fact_sales') }}
 ),
 d_customer as (
     select * from {{ ref('dim_customer') }}
